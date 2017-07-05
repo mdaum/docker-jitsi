@@ -13,4 +13,8 @@ if [[ -n "$JITSI_HOST" ]]; then
     ARGS="$ARGS --host=$JITSI_HOST"
 fi
 
+if [[ -n "$JITSI_APIS" ]]; then
+    ARGS="$ARGS --apis=$JITSI_APIS"
+fi
+
 /usr/share/jitsi-videobridge/jvb.sh $ARGS
